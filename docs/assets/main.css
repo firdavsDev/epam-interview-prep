@@ -234,3 +234,45 @@ body.dark .footer {
     cursor: pointer;
     margin-left: 1rem;
 }
+
+/* === DARK MODE TRANSITION === */
+body {
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* === SCROLL TO TOP BUTTON === */
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    z-index: 99;
+    background-color: #007acc;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.6rem 0.8rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+#scrollTopBtn:hover {
+    background-color: #005fa3;
+}
+
+/* === PROGRESS BAR === */
+.progress-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 4px;
+    background-color: #007acc;
+    width: 0%;
+    z-index: 1000;
+    transition: width 0.2s ease-out;
+}
+
+body.dark .progress-bar {
+    background-color: #42aaff;
+}
