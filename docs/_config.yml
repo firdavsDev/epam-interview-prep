@@ -1,6 +1,6 @@
 title: "EPAM Interview Prep"
 description: "Comprehensive preparation material for EPAM and BigTech backend interviews"
-baseurl: "" # leave empty for user.github.io/repo
+baseurl: "/epam-interview-prep"
 theme: minima
 
 # SEO & Social
@@ -20,7 +20,6 @@ minima:
         platform: linkedin,
         user_url: "https://linkedin.com/in/davronbek-boltayev",
       }
-  # Optional nav menu
   header_pages:
     - index.md
 
@@ -31,19 +30,24 @@ highlighter: rouge
 # Permalinks
 permalink: pretty
 
-# Plugins (GitHub allows limited)
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
 # Favicon
-favicon: "/favicon.ico" # add favicon.ico to docs/
+favicon: "/epam-interview-prep/favicon.ico"
 
-# Google Analytics (optional)
-# google_analytics: UA-XXXXXXXXX-X
+# Default layout for pages
+defaults:
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: default
 
 # Build exclusions
 exclude:
   - README.md
-  - CONTRIBUTING.md
+  - CONTRIBUTORS.md
   - LICENSE

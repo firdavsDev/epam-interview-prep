@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ page.title | default: site.title }}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{{ '/assets/main.css' | relative_url }}">
+</head>
+
+<body>
+
+    <main>
+        {{ content }}
+    </main>
+
+    <footer class="footer">
+        <hr>
+        <p>Site generated with ❤️ by <a href="https://github.com/your-username">your-username</a></p>
+    </footer>
+
+</body>
+
+</html>
