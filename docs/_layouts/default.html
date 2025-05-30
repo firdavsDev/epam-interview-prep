@@ -16,12 +16,9 @@
             <a class="nav-logo" href="{{ '/' | relative_url }}">EPAM Prep</a>
             <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
             <ul class="nav-links">
-                <li><a href="{{ '/index.html' | relative_url }}">Home</a></li>
-                <li><a href="{{ '/1_python_basics.md' | relative_url }}">Python</a></li>
-                <li><a href="{{ '/3_deployment_devops.md' | relative_url }}">DevOps</a></li>
-                <li><a href="{{ '/5_algorithms.md' | relative_url }}">Algorithms</a></li>
                 <li><a href="https://github.com/firdavsDev/epam-interview-prep" target="_blank">GitHub</a></li>
             </ul>
+
             <!-- 🌙 Dark mode switch -->
             <button class="dark-toggle" id="darkToggle" title="Toggle Dark Mode">🌙</button>
         </div>
@@ -35,29 +32,58 @@
     <!-- 🔻 FOOTER -->
     <footer class="footer">
         <p>© {{ site.time | date: '%Y' }} by <a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank">{{
-                site.author }}</a> · Built with 💙 using GitHub Pages</p>
+                site.author }}</a> · Built with 🪐</p>
     </footer>
 
-    <!-- ✅ JS for nav toggle and dark mode -->
+
+    <!-- ✅ Scroll to Top Button -->
+    <button id="scrollTopBtn" title="Back to Top">⬆️</button>
+
+    <!-- ✅ Scripts -->
     <script>
-        // Mobile navbar
+        // === Mobile Nav Toggle ===
         const toggle = document.querySelector('.nav-toggle');
         const links = document.querySelector('.nav-links');
-        toggle.addEventListener('click', () => {
-            links.classList.toggle('active');
-        });
+        toggle.addEventListener('click', () => links.classList.toggle('active'));
 
-        // Dark mode
+        // === Dark Mode Toggle ===
         const darkBtn = document.getElementById('darkToggle');
+        const isDark = () => document.body.classList.contains('dark');
+
+        const updateThemeIcon = () => {
+            darkBtn.textContent = isDark() ? '☀️' : '🌙';
+        };
+
         darkBtn.addEventListener('click', () => {
             document.body.classList.toggle('dark');
-            localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+            localStorage.setItem('theme', isDark() ? 'dark' : 'light');
+            updateThemeIcon();
         });
 
-        // Auto-load saved theme
+        // On load
         if (localStorage.getItem('theme') === 'dark') {
             document.body.classList.add('dark');
         }
+        updateThemeIcon();
+
+        // === Scroll To Top ===
+        const scrollBtn = document.getElementById('scrollTopBtn');
+        window.addEventListener('scroll', () => {
+            scrollBtn.style.display = window.scrollY > 300 ? 'block' : 'none';
+        });
+        scrollBtn.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+
+        // === Progress Bar ===
+        const progressBar = document.createElement('div');
+        progressBar.className = 'progress-bar';
+        document.body.appendChild(progressBar);
+
+        window.addEventListener('scroll', () => {
+            const scroll = window.scrollY;
+            const height = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = (scroll / height) * 100;
+            progressBar.style.width = progress + '%';
+        });
     </script>
 
 </body>
