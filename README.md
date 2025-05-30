@@ -23,6 +23,10 @@ Everyone is welcome! Feel free to fork, suggest changes, or submit new sections 
 
 See [`CONTRIBUTORS.md`](CONTRIBUTORS.md) for acknowledgements.
 
+## 🔗 Live Docs
+
+Check out the rendered site here: [Interview Prep Docs](https://your-username.github.io/interview-prep/)
+
 ## 📜 License
 
 MIT License – see [`LICENSE`](LICENSE) for details.
