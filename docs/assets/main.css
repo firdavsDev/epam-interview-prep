@@ -1,43 +1,56 @@
-/* ==== Base Styling ==== */
+/* === GLOBAL RESET === */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* === BODY LAYOUT === */
 body {
-    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
-    max-width: 800px;
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    font-size: 17px;
+    line-height: 1.8;
+    background-color: #fafafa;
+    color: #222;
+    padding: 2rem;
+}
+
+/* === MAIN WRAPPER === */
+main {
+    max-width: 780px;
     margin: auto;
-    padding: 2rem 1rem;
-    background-color: #fefefe;
-    color: #1a1a1a;
-    line-height: 1.7;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.04);
 }
 
-/* ==== Headings ==== */
-h1,
-h2,
-h3,
-h4 {
-    color: #2c3e50;
-    font-weight: 600;
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
+/* === HEADINGS === */
 h1 {
-    font-size: 2.2rem;
+    font-size: 2.4rem;
+    color: #2c3e50;
+    margin-bottom: 1rem;
     border-bottom: 2px solid #007acc;
-    padding-bottom: 0.3rem;
+    padding-bottom: 0.4rem;
 }
 
 h2 {
-    font-size: 1.7rem;
-    border-left: 5px solid #007acc;
-    padding-left: 0.5rem;
+    font-size: 1.8rem;
+    color: #007acc;
+    margin: 2rem 0 1rem;
 }
 
 h3 {
-    font-size: 1.3rem;
-    color: #34495e;
+    font-size: 1.4rem;
+    margin: 1.5rem 0 0.8rem;
+    color: #444;
 }
 
-/* ==== Links ==== */
+/* === PARAGRAPH & LINKS === */
+p {
+    margin-bottom: 1rem;
+}
+
 a {
     color: #007acc;
     text-decoration: none;
@@ -47,64 +60,59 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ==== Lists ==== */
+/* === LISTS === */
 ul {
-    padding-left: 1.2rem;
+    margin-left: 1.5rem;
     margin-bottom: 1.5rem;
 }
 
-ul li {
-    margin-bottom: 0.5rem;
+li {
+    margin-bottom: 0.4rem;
 }
 
-/* ==== Code blocks ==== */
-code {
-    background-color: #f2f2f2;
-    padding: 2px 5px;
-    border-radius: 4px;
-    font-family: monospace;
-}
-
+/* === CODE BLOCKS === */
 pre code {
     display: block;
     padding: 1rem;
+    background-color: #f4f4f4;
     overflow-x: auto;
-    background: #f4f4f4;
-    border-left: 5px solid #007acc;
+    border-left: 4px solid #007acc;
+    border-radius: 4px;
 }
 
-/* ==== Blockquote ==== */
+/* === BLOCKQUOTE === */
 blockquote {
     padding: 1rem;
-    margin: 1rem 0;
-    border-left: 4px solid #007acc;
-    background-color: #f8f9fa;
+    background: #f9f9f9;
+    border-left: 5px solid #007acc;
     color: #555;
+    margin: 1rem 0;
     font-style: italic;
 }
 
-/* ==== Tables ==== */
+/* === TABLE === */
 table {
-    width: 100%;
     border-collapse: collapse;
+    width: 100%;
     margin: 1rem 0;
 }
 
 th,
 td {
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     padding: 0.75rem;
     text-align: left;
 }
 
 th {
-    background-color: #e9ecef;
+    background-color: #f0f0f0;
 }
 
-/* ==== Footer note ==== */
+/* === FOOTER === */
 .footer {
     text-align: center;
-    margin-top: 3rem;
-    font-size: 0.9rem;
-    color: #999;
+    margin-top: 4rem;
+    padding-top: 2rem;
+    font-size: 0.85rem;
+    color: #888;
 }
