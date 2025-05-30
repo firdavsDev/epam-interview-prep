@@ -108,13 +108,7 @@ th {
     background-color: #f0f0f0;
 }
 
-/* === NAVBAR === */
-.navbar {
-    background-color: #ffffff;
-    border-bottom: 1px solid #eee;
-    padding: 0.8rem 1rem;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
-}
+
 
 .nav-container {
     max-width: 780px;
@@ -190,4 +184,53 @@ th {
 
 .footer a:hover {
     text-decoration: underline;
+}
+
+/* === STICKY NAVBAR === */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eee;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+/* === DARK MODE === */
+body.dark {
+    background-color: #1e1e1e;
+    color: #ddd;
+}
+
+body.dark main {
+    background-color: #2c2c2c;
+    color: #eee;
+}
+
+body.dark .navbar {
+    background-color: #292929;
+    border-color: #444;
+}
+
+body.dark a {
+    color: #42aaff;
+}
+
+body.dark pre code {
+    background-color: #333;
+    border-color: #555;
+}
+
+body.dark .footer {
+    color: #aaa;
+}
+
+/* === Dark Mode Button === */
+.dark-toggle {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    margin-left: 1rem;
 }

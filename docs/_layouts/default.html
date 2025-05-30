@@ -10,7 +10,7 @@
 
 <body>
 
-    <!-- 🔹 Responsive NAVBAR -->
+    <!-- 🔹 NAVBAR (Sticky) -->
     <nav class="navbar">
         <div class="nav-container">
             <a class="nav-logo" href="{{ '/' | relative_url }}">EPAM Prep</a>
@@ -22,24 +22,42 @@
                 <li><a href="{{ '/5_algorithms.md' | relative_url }}">Algorithms</a></li>
                 <li><a href="https://github.com/firdavsDev/epam-interview-prep" target="_blank">GitHub</a></li>
             </ul>
+            <!-- 🌙 Dark mode switch -->
+            <button class="dark-toggle" id="darkToggle" title="Toggle Dark Mode">🌙</button>
         </div>
     </nav>
 
+    <!-- 🔸 MAIN -->
     <main>
         {{ content }}
     </main>
 
+    <!-- 🔻 FOOTER -->
     <footer class="footer">
         <p>© {{ site.time | date: '%Y' }} by <a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank">{{
                 site.author }}</a> · Built with 💙 using GitHub Pages</p>
     </footer>
 
+    <!-- ✅ JS for nav toggle and dark mode -->
     <script>
+        // Mobile navbar
         const toggle = document.querySelector('.nav-toggle');
         const links = document.querySelector('.nav-links');
         toggle.addEventListener('click', () => {
             links.classList.toggle('active');
         });
+
+        // Dark mode
+        const darkBtn = document.getElementById('darkToggle');
+        darkBtn.addEventListener('click', () => {
+            document.body.classList.toggle('dark');
+            localStorage.setItem('theme', document.body.classList.contains('dark') ? 'dark' : 'light');
+        });
+
+        // Auto-load saved theme
+        if (localStorage.getItem('theme') === 'dark') {
+            document.body.classList.add('dark');
+        }
     </script>
 
 </body>
