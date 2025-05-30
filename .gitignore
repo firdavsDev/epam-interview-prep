@@ -1,0 +1,22 @@
+# Byte-compiled
+__pycache__/
+*.py[cod]
+
+# Virtual environments
+.venv/
+env/
+venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE configs
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Backup
+*~

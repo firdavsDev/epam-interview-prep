@@ -1,0 +1,13 @@
+{
+    "project": "epam-interview-prep",
+    "audience": "Python Backend Developers",
+    "language": "English",
+    "source": "Real interviews and expert insight",
+    "structure": [
+        "Python",
+        "Data Analysis",
+        "DevOps",
+        "System Design",
+        "Soft Skills"
+    ]
+}
