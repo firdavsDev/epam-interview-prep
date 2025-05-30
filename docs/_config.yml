@@ -1,4 +1,49 @@
+title: "EPAM Interview Prep"
+description: "Comprehensive preparation material for EPAM and BigTech backend interviews"
+baseurl: "" # leave empty for user.github.io/repo
 theme: minima
-title: EPAM Interview Prep
-description: Real questions & answers for backend interviews
+
+# SEO & Social
+author: "Davronbek Boltayev"
+lang: en-US
+email: davronbekboltyev@gmail.com
+url: "https://firdavsdev.github.io/epam-interview-prep"
+github_username: firdavsDev
+linkedin: davronbek-boltayev
+
+# Theme config
+minima:
+  skin: dark
+  social_links:
+    - { platform: github, user_url: "https://github.com/firdavsDev" }
+    - {
+        platform: linkedin,
+        user_url: "https://linkedin.com/in/davronbek-boltayev",
+      }
+  # Optional nav menu
+  header_pages:
+    - index.md
+
+# Markdown renderer
 markdown: kramdown
+highlighter: rouge
+
+# Permalinks
+permalink: pretty
+
+# Plugins (GitHub allows limited)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Favicon
+favicon: "/favicon.ico" # add favicon.ico to docs/
+
+# Google Analytics (optional)
+# google_analytics: UA-XXXXXXXXX-X
+
+# Build exclusions
+exclude:
+  - README.md
+  - CONTRIBUTING.md
+  - LICENSE
