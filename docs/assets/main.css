@@ -7,18 +7,23 @@
 
 /* === BODY LAYOUT === */
 body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    transition: background-color 0.3s, color 0.3s;
     font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
     font-size: 17px;
     line-height: 1.8;
     background-color: #fafafa;
     color: #222;
-    padding: 2rem;
 }
+
 
 /* === MAIN WRAPPER === */
 main {
+    flex: 1;
     max-width: 780px;
-    margin: auto;
+    margin: 2rem auto;
     padding: 2rem;
     background-color: #ffffff;
     border-radius: 8px;
@@ -170,7 +175,7 @@ th {
 /* === FOOTER === */
 .footer {
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 2rem;
     padding: 2rem 1rem;
     color: #999;
     font-size: 0.9rem;
@@ -224,6 +229,12 @@ body.dark pre code {
 
 body.dark .footer {
     color: #aaa;
+}
+
+/* === DARK MODE FOOTER TWEAK === */
+body.dark .footer {
+    background-color: #121212;
+    border-top: 1px solid #333;
 }
 
 /* === Dark Mode Button === */
