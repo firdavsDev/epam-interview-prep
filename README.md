@@ -15,7 +15,7 @@ This repository contains structured and categorized technical interview preparat
 
 ## 📁 Structure
 
-All sections are modularly placed under `topics/` for easy navigation.
+All sections are modularly placed under `docs/` for easy navigation.
 
 ## 👥 Contributors
 
