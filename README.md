@@ -25,7 +25,7 @@ See [`CONTRIBUTORS.md`](CONTRIBUTORS.md) for acknowledgements.
 
 ## 🔗 Live Docs
 
-Check out the rendered site here: [Interview Prep Docs](https://your-username.github.io/interview-prep/)
+Check out the rendered site here: [Interview Prep Docs](https://firdavsdev.github.io/epam-interview-prep/)
 
 ## 📜 License
 
