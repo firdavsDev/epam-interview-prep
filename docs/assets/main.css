@@ -108,13 +108,11 @@ th {
     background-color: #f0f0f0;
 }
 
-
 /* === NAVBAR === */
 .navbar {
     background-color: #ffffff;
     border-bottom: 1px solid #eee;
-    padding: 1rem 0;
-    margin-bottom: 2rem;
+    padding: 0.8rem 1rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
 }
 
@@ -122,8 +120,8 @@ th {
     max-width: 780px;
     margin: auto;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
 }
 
 .nav-logo {
@@ -136,17 +134,43 @@ th {
 .nav-links {
     list-style: none;
     display: flex;
-    gap: 1.2rem;
+    gap: 1rem;
 }
 
 .nav-links li a {
     color: #007acc;
-    font-weight: 500;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .nav-links li a:hover {
     text-decoration: underline;
+}
+
+.nav-toggle {
+    display: none;
+    font-size: 1.6rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* === MOBILE STYLES === */
+@media (max-width: 640px) {
+    .nav-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        gap: 0.8rem;
+        margin-top: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
 }
 
 /* === FOOTER === */

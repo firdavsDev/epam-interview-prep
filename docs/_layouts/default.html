@@ -10,10 +10,11 @@
 
 <body>
 
-    <!-- 🔹 NAVIGATION -->
+    <!-- 🔹 Responsive NAVBAR -->
     <nav class="navbar">
         <div class="nav-container">
             <a class="nav-logo" href="{{ '/' | relative_url }}">EPAM Prep</a>
+            <button class="nav-toggle" aria-label="Toggle menu">&#9776;</button>
             <ul class="nav-links">
                 <li><a href="{{ '/index.html' | relative_url }}">Home</a></li>
                 <li><a href="{{ '/1_python_basics.md' | relative_url }}">Python</a></li>
@@ -24,16 +25,22 @@
         </div>
     </nav>
 
-    <!-- 🔸 MAIN CONTENT -->
     <main>
         {{ content }}
     </main>
 
-    <!-- 🔻 FOOTER -->
     <footer class="footer">
         <p>© {{ site.time | date: '%Y' }} by <a href="https://linkedin.com/in/{{ site.linkedin }}" target="_blank">{{
                 site.author }}</a> · Built with 💙 using GitHub Pages</p>
     </footer>
+
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const links = document.querySelector('.nav-links');
+        toggle.addEventListener('click', () => {
+            links.classList.toggle('active');
+        });
+    </script>
 
 </body>
 
