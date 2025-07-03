@@ -30,3 +30,6 @@ Check out the rendered site here: [Interview Prep Docs](https://firdavsdev.githu
 ## 📜 License
 
 MIT License – see [`LICENSE`](LICENSE) for details.
+
+## Resource
+- [GitHUb](https://github.com/firdavsDev/python_interview_questions)
